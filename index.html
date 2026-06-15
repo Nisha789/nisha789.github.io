@@ -139,7 +139,7 @@
         .exp-timeline { position: relative; }
         .exp-timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--cyan), transparent); }
         .exp-item { padding-left: 2.2rem; margin-bottom: 3rem; position: relative; }
-        .exp-item::before { content: ''; position: absolute; left: -5px; top: 0.45rem; width: 12px; height: 12px; border-radius: 50%; background: var(--cyan); border: 2px solid var(--navy); box-shadow: 0 0 12px rgba(0,212,255,0.5); }
+        .exp-item::before { content: ''; position: absolute; left: -5px; top: 0.45rem; width: 12px; height: 12px; border-radius: 50%; background: var(--cyan); border: 2px solid var(--navy); box-shadow: 0 0 0 3px var(--cyan-dim); }
         .exp-period { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--cyan); letter-spacing: 0.08em; margin-bottom: 0.35rem; }
         .exp-role { font-family: 'Space Grotesk', sans-serif; font-size: 1.12rem; font-weight: 700; margin-bottom: 0.2rem; }
         .exp-company { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
@@ -152,13 +152,13 @@
         /* PROJECTS */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; transition: all 0.25s; position: relative; overflow: hidden; }
-        .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--purple)); transform: scaleX(0); transform-origin: left; transition: transform 0.25s; }
+        .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--purple)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
         .project-card:hover { transform: translateY(-4px); border-color: var(--cyan); }
         .project-card:hover::before { transform: scaleX(1); }
         .project-card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
         .project-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; }
         .project-card p { font-size: 0.87rem; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
-        .project-impact { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--green); background: rgba(0,255,159,0.08); border: 1px solid rgba(0,255,159,0.2); padding: 0.4rem 0.7rem; border-radius: 4px; display: inline-block; }
+        .project-impact { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--green); background: rgba(0,255,159,0.08); border: 1px solid rgba(0,255,159,0.2); padding: 0.4rem 0.8rem; border-radius: 4px; display: block; margin-bottom: 0.8rem; }
 
         /* PRESS / FEATURED BADGES */
         .press-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.7rem; }
@@ -185,7 +185,7 @@
         .contact-section { text-align: center; padding: 5rem 6% 4rem; max-width: 1200px; margin: 0 auto; }
         .contact-cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 3rem 2.5rem; max-width: 680px; margin: 0 auto; position: relative; overflow: hidden; }
         .contact-cta-box::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(0,212,255,0.07), transparent 70%); pointer-events: none; }
-        .contact-status { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,255,159,0.1); border: 1px solid rgba(0,255,159,0.25); color: var(--green); padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.72rem; margin-bottom: 1.2rem; }
+        .contact-status { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,255,159,0.1); border: 1px solid rgba(0,255,159,0.25); color: var(--green); padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.7rem; margin-bottom: 1.2rem; position: relative; z-index: 1; }
         .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
         .contact-cta-box h2 { margin-bottom: 0.8rem; font-size: clamp(1.5rem, 2.5vw, 2rem); }
@@ -296,9 +296,9 @@
         </div>
         <div class="reveal">
             <div class="about-text">
-                <p>I'm a <strong>Senior Data &amp; AI Engineer</strong> at Tata Consultancy Services, currently embedded in the Databricks Center of Excellence building agentic systems that actually run production workloads.</p>
-                <p>My work sits at the intersection of large-scale data engineering and intelligent automation. I don't just move data; I build the layer of intelligence on top of it — agents that reason, retrieve, and remediate at scale.</p>
-                <p>Before the AI/ML Practice, I spent three years owning Azure data pipelines and lakehouses for enterprise retail clients — learning the hard way that scale, reliability, and cost discipline are non-negotiable.</p>
+                <p>I'm a <strong>Senior Data &amp; AI Engineer</strong> at Tata Consultancy Services, currently embedded in the Databricks Center of Excellence building agentic systems that actually reduce toil.</p>
+                <p>My work sits at the intersection of large-scale data engineering and intelligent automation. I don't just move data; I build the layer of intelligence on top of it — agents that solve hard operational problems end-to-end.</p>
+                <p>Before the AI/ML Practice, I spent three years owning Azure data pipelines and lakehouses for enterprise retail clients — learning the hard way that scale, reliability, and cost discipline win.</p>
                 <div class="about-tags">
                     <span class="about-tag">Agentic AI</span>
                     <span class="about-tag">Databricks CoE</span>
@@ -321,7 +321,7 @@
             <div class="skill-card">
                 <div class="skill-card-header">
                     <div class="skill-card-left"><div class="skill-card-icon">🤖</div><div class="skill-card-title">Agentic AI &amp; LLMs</div></div>
-                    <span class="skill-level">EXPERT</span>
+                    <span class="skill-level">ADVANCED</span>
                 </div>
                 <div class="skill-tags">
                     <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">Multi-Agent Orchestration</span>
@@ -332,7 +332,7 @@
             <div class="skill-card">
                 <div class="skill-card-header">
                     <div class="skill-card-left"><div class="skill-card-icon">⚙️</div><div class="skill-card-title">Data Engineering</div></div>
-                    <span class="skill-level">EXPERT</span>
+                    <span class="skill-level">ADVANCED</span>
                 </div>
                 <div class="skill-tags">
                     <span class="tag">PySpark Optimization</span><span class="tag">Delta Lake</span><span class="tag">Medallion Architecture</span>
@@ -395,10 +395,10 @@
                 <div class="exp-role">Data &amp; AI Engineer — Databricks CoE, AI/ML Practice</div>
                 <div class="exp-company">Tata Consultancy Services · Chennai</div>
                 <ul class="exp-bullets">
-                    <li>Engineered a production multi-agent LLM system (LangGraph + LangChain) processing 500–2,000 pipeline incidents daily, replacing 10–15 manual engineer hours with fully autonomous root-cause diagnosis and auto-remediation.</li>
+                    <li>Engineered a production multi-agent LLM system (LangGraph + LangChain) processing 500–2,000 pipeline incidents daily, replacing 10–15 manual engineer hours with fully autonomous resolution.</li>
                     <li>Architected Classification → RAG Knowledge → Genie Agent pipeline reducing mean resolution time by 88% (45 min → &lt;5 min) while eliminating toil for 80%+ incident categories.</li>
-                    <li>Automated complete incident lifecycle via Jira API integration: ticket creation, code generation, execution, and closure — zero human touchpoints across customer success pipeline.</li>
-                    <li>Built AI-powered customer recommendation engine with Mosaic AutoML + MLflow versioning; designed Bronze-Silver-Gold Lakeflow pipelines and Genie natural language interface for business users.</li>
+                    <li>Automated complete incident lifecycle via Jira API integration: ticket creation, code generation, execution, and closure — zero human touchpoints across customer success pipelines.</li>
+                    <li>Built AI-powered customer recommendation engine with Mosaic AutoML + MLflow versioning; designed Bronze-Silver-Gold Lakeflow pipelines and Genie natural language interface for retail clients.</li>
                     <li>Designed Oracle-to-Unity Catalog privilege migration framework using LLM-based role translation — compressed migration cycle from weeks to hours with 100% privilege parity.</li>
                     <li>Delivered call-centre analytics platform: Whisper transcription + Databricks AI Functions for sentiment, PII redaction, summarization; governed end-to-end via Unity Catalog.</li>
                 </ul>
@@ -436,24 +436,24 @@
             <div class="project-card">
                 <div class="project-card-icon">🤖</div>
                 <h3>AgenticOps Platform</h3>
-                <p>Production LangGraph + LangChain multi-agent orchestration classifying, diagnosing, and auto-remediating 500–2,000 pipeline failures daily across Databricks, Snowflake, ITSM — eliminating 80%+ manual incident triage.</p>
+                <p>Production LangGraph + LangChain multi-agent orchestration classifying, diagnosing, and auto-remediating 500–2,000 pipeline failures daily across Databricks, Snowflake, ITSM — eliminating manual toil entirely.</p>
                 <span class="project-impact">88% resolution time cut · 10–15 hrs/day freed · 80%+ auto-resolved</span>
                 <div class="press-badges">
-                    <a href="https://www.databricks.com/blog/introducing-databricks-genai-partner-accelerators-data-engineering-migration#tcs-agentic" target="_blank" rel="noopener" class="press-badge">🌟 Databricks Partner Accelerator</a>
+                    <a href="https://www.databricks.com/blog/introducing-databricks-genai-partner-accelerators-data-engineering-migration#tcs-agentic" target="_blank" rel="noopener" class="press-badge">���� Databricks GenAI Accelerator</a>
                     <a href="https://www.databricks.com/blog/cross-industry-technology-and-functional-genie-partner-solutions#it-operations" target="_blank" rel="noopener" class="press-badge">🏆 Databricks Genie Partner</a>
                 </div>
-                <p class="project-note">Recognized by Databricks as a <strong>Brickbuilder partner accelerator</strong>, demonstrating 30–40% org-wide operational overhead reduction. Now handles incident triage at petabyte scale with zero escalation for majority of cases.</p>
+                <p class="project-note">Recognized by Databricks as a <strong>Brickbuilder partner accelerator</strong>, demonstrating 30–40% org-wide operational overhead reduction. Now handles incident intake from 3 enterprise platforms with 99.2% uptime.</p>
             </div>
             <div class="project-card">
                 <div class="project-card-icon">🛒</div>
                 <h3>ML Recommendation Engine</h3>
-                <p>Mosaic AI AutoML-powered retail recommendation system using Bronze-Silver-Gold Lakeflow pipelines, Photon acceleration, MLflow experiment tracking, and Genie conversational SQL layer for business users.</p>
+                <p>Mosaic AI AutoML-powered retail recommendation system using Bronze-Silver-Gold Lakeflow pipelines, Photon acceleration, MLflow experiment tracking, and Genie conversational SQL layer.</p>
                 <span class="project-impact">Retail client · Zero SQL required · 3x faster personalization</span>
             </div>
             <div class="project-card">
                 <div class="project-card-icon">📞</div>
                 <h3>Call Centre Analytics Platform</h3>
-                <p>Lakeflow Declarative Pipelines with Whisper transcription + Databricks AI Functions for sentiment analysis, PII redaction, summarization. Genie natural language interface enabling non-technical queries over unstructured data.</p>
+                <p>Lakeflow Declarative Pipelines with Whisper transcription + Databricks AI Functions for sentiment analysis, PII redaction, summarization. Genie natural language interface enabling non-technical analysts.</p>
                 <span class="project-impact">Telecom client · Unity Catalog end-to-end · Real-time insights</span>
             </div>
             <div class="project-card">
@@ -471,7 +471,7 @@
             <div class="project-card">
                 <div class="project-card-icon">📊</div>
                 <h3>Enterprise Data Quality Fabric</h3>
-                <p>Observability framework across 50+ datasets with SCD-aware deduplication, data contract enforcement, and automated anomaly detection — cut duplicate loads by 95%, improved BI reliability org-wide.</p>
+                <p>Observability framework across 50+ datasets with SCD-aware deduplication, data contract enforcement, and automated anomaly detection — cut duplicate loads by 95%, improved BI reliability.</p>
                 <span class="project-impact">50+ datasets · 8 hrs/week saved · $20K+ annual savings</span>
             </div>
         </div>
@@ -501,7 +501,7 @@
             <div class="contact-cta-box">
                 <div class="contact-status"><span class="status-dot"></span> Actively Interviewing · Open to Senior Roles</div>
                 <h2>Transform data chaos into competitive advantage</h2>
-                <p>I bring proven track records: 88% faster incident resolution, 80%+ automation, $20K+ annual savings unlocked. Ready to lead cross-functional data &amp; AI initiatives that turn raw data into intelligent systems. Ready to ship production-grade multi-agent LLMs, scale lakehouses to petabyte+ volumes, and eliminate toil through agentic automation. Let's build systems that think, learn, and solve at scale.</p>
+                <p>I bring proven track records: 88% faster incident resolution, 80%+ automation, $20K+ annual savings unlocked. Ready to lead cross-functional data &amp; AI initiatives that turn raw complexity into operational excellence.</p>
                 <div class="contact-links">
                     <a href="mailto:nishassl2k@gmail.com" class="btn btn-primary">✉ Start a Conversation</a>
                     <a href="https://linkedin.com/in/nisha-data-ai" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
