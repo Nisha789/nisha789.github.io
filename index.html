@@ -118,7 +118,6 @@
         h2 span { color: var(--cyan); }
 
         /* ABOUT */
-        .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
         .about-text p { font-size: 1rem; color: #9DB0C8; line-height: 1.8; margin-bottom: 1rem; }
         .about-text p strong { color: var(--text); font-weight: 600; }
         .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
@@ -212,7 +211,6 @@
             .stat-strip { flex-wrap: wrap; }
             .stat { min-width: 50%; border-right: none; border-bottom: 1px solid var(--border); }
             .nav-links { display: none; }
-            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
         }
         @media (prefers-reduced-motion: reduce) {
             .t-line { animation: none; opacity: 1; transform: none; }
@@ -296,7 +294,7 @@
             <div class="section-eyebrow">// About Me</div>
             <h2>Engineer by training, <span>builder by instinct</span></h2>
         </div>
-        <div class="about-grid reveal">
+        <div class="reveal">
             <div class="about-text">
                 <p>I'm a <strong>Senior Data &amp; AI Engineer</strong> at Tata Consultancy Services, currently embedded in the Databricks Center of Excellence building agentic systems that actually run production workloads.</p>
                 <p>My work sits at the intersection of large-scale data engineering and intelligent automation. I don't just move data; I build the layer of intelligence on top of it — agents that reason, retrieve, and remediate at scale.</p>
